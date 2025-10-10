@@ -4,3 +4,101 @@
 #root {
   max-width: 100%;
 }
+
+.Navbar {
+  width: 100%;
+  padding: 10px 30px;
+  background-color: rgb(2, 38, 43);
+  color: white;
+  position: relative;
+}
+.LOGO img {
+  height: 50px;
+  width: 50px;
+}
+.Navigation {
+  margin-left: end;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.navigationList {
+  list-style-type: none;
+  display: flex;
+  gap: 40px;
+  padding-left: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.listItem {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+
+.listItem:hover {
+  border-bottom: 3px solid rgb(35, 146, 143);
+}
+
+/* ====== HAMBURGER MENU ====== */
+.hamburgerMenu {
+  position: fixed;
+  top: 70px;
+  right: -100%; 
+  width: 100%; 
+  height: 100vh;
+  background-color: rgb(2, 38, 43);
+  display: flex;
+  justify-content: center;
+  transition: right 0.4s ease-in-out;
+  z-index: 1000;
+}
+
+/* When open */
+.hamburgerMenu.showMenu {
+  right: 0;
+}
+
+/* Hamburger menu links */
+.hamburgerNavigationList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.hamburgerListItem {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.hamburgerListItem:hover {
+  color: rgb(35, 146, 143);
+}
+
+/* Hamburger icon */
+.hamburgerIcon {
+  display: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+@media (max-width: 768px) {
+  .Navigation {
+    display: none;
+  }
+
+  .hamburgerIcon {
+    display: block;
+  }
+}
