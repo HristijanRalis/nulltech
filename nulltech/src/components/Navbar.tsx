@@ -12,17 +12,19 @@ export const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const viewportHeight = window.innerHeight;
 
-      if (scrollY < viewportHeight) {
+      if (scrollY < 100) {
+        scrollCount.current = 0;
         setIsVisible(false);
         return;
       }
 
-      if (scrollY > viewportHeight * 3) {
+      if (scrollY > 100) {
+        scrollCount.current += 1;
+      }
+
+      if (scrollCount.current >= 3) {
         setIsVisible(true);
-      } else {
-        setIsVisible(false);
       }
     };
 
