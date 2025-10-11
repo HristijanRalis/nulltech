@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+
 import { Home } from "./pages/Home/Home";
 import { AboutUs } from "./pages/AboutUs/AboutUs";
 import { Services } from "./pages/Services/Services";
@@ -11,12 +11,25 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Routes>
+      <section id="home" className="section">
+        <Home />
+      </section>
+      <section id="aboutUs" className="section">
+        <AboutUs />
+      </section>
+      <section id="services" className="section">
+        <Services />
+      </section>
+      <section id="contact" className="section">
+        <Contact />
+      </section>
+
+      {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
-      </Routes>
+      </Routes> */}
     </div>
   );
 }

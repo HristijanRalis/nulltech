@@ -1,88 +1,136 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-export const Navbar = () => {
-  const [openMenu, setOpenMenu] = useState(false);
+import { useState, useEffect, useRef } from "react";
 
-  const handleToggle = () => {
-    setOpenMenu(!openMenu);
+export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  let scrollCount = useRef(0);
+
+  // Show navbar only after scrolling 100px
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const viewportHeight = window.innerHeight;
+
+      if (scrollY < viewportHeight) {
+        setIsVisible(false);
+        return;
+      }
+
+      if (scrollY > viewportHeight * 3) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Smooth scroll to section
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMenuOpen(false); // close mobile menu when link clicked
   };
+
   return (
-    <div className="Navbar d-flex justify-content-between align-items-center">
+    <div
+      className={`Navbar d-flex justify-content-between align-items-center ${
+        isVisible ? "visible" : "hidden"
+      }`}
+    >
+      {/* LOGO */}
       <div className="LOGO">
         <img src="/images/LOGO/nullTech.png" alt="logo" />
       </div>
+
+      {/* NAVIGATION LINKS */}
       <nav className="Navigation">
         <ul className="navigationList">
           <li>
-            <Link to="/" className="listItem">
+            <button
+              className="listItem"
+              onClick={() => scrollToSection("home")}
+            >
               Home
-            </Link>
+            </button>
           </li>
           <li>
-            <Link to="/aboutUs" className="listItem">
+            <button
+              className="listItem"
+              onClick={() => scrollToSection("aboutUs")}
+            >
               About Us
-            </Link>
+            </button>
           </li>
           <li>
-            <Link to="/services" className="listItem">
+            <button
+              className="listItem"
+              onClick={() => scrollToSection("services")}
+            >
               Services
-            </Link>
+            </button>
           </li>
           <li>
-            <Link to="/contact" className="listItem">
+            <button
+              className="listItem"
+              onClick={() => scrollToSection("contact")}
+            >
               Contact
-            </Link>
+            </button>
           </li>
         </ul>
       </nav>
 
-      <div className="HAMBURGER" onClick={handleToggle}>
+      {/* HAMBURGER ICON */}
+      <div className="HAMBURGER" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <FontAwesomeIcon
-          icon={openMenu ? faTimes : faBars}
+          icon={isMenuOpen ? faTimes : faBars}
           size="lg"
           className="hamburgerIcon"
         />
       </div>
 
-      <div className={`hamburgerMenu ${openMenu ? "showMenu" : ""}`}>
+      {/* MOBILE MENU */}
+      <div className={`hamburgerMenu ${isMenuOpen ? "showMenu" : ""}`}>
         <ul className="hamburgerNavigationList">
           <li>
-            <Link
-              to="/"
+            <button
               className="hamburgerListItem"
-              onClick={() => setOpenMenu(false)}
+              onClick={() => scrollToSection("home")}
             >
               Home
-            </Link>
+            </button>
           </li>
           <li>
-            <Link
-              to="/aboutUs"
+            <button
               className="hamburgerListItem"
-              onClick={() => setOpenMenu(false)}
+              onClick={() => scrollToSection("aboutUs")}
             >
               About Us
-            </Link>
+            </button>
           </li>
           <li>
-            <Link
-              to="/services"
+            <button
               className="hamburgerListItem"
-              onClick={() => setOpenMenu(false)}
+              onClick={() => scrollToSection("services")}
             >
               Services
-            </Link>
+            </button>
           </li>
           <li>
-            <Link
-              to="/contact"
+            <button
               className="hamburgerListItem"
-              onClick={() => setOpenMenu(false)}
+              onClick={() => scrollToSection("contact")}
             >
               Contact
-            </Link>
+            </button>
           </li>
         </ul>
       </div>
