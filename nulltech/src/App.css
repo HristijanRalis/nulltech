@@ -147,6 +147,11 @@
   text-transform: uppercase;
   margin-block: 50px;
 }
+
+.titleDescription {
+  color: #0b3e3f;
+  width: 50%;
+}
 .description {
   color: #0b3e3f;
   font-size: 20px;
@@ -216,6 +221,38 @@
   align-items: center;
   overflow: hidden;
 }
+
+/* ====== CONTACT ====== */
+
+.Contact {
+  width: 100%;
+  min-height: 100vh;
+  background: url("/images/mainBackground.png") no-repeat bottom center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+.contactTitle {
+  color: #b4806a;
+  font-size: 25px;
+  text-align: center;
+}
+
+.contactList {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contactItem {
+  color: #23928f;
+  font-size: 13px;
+}
+
 @media (max-width: 768px) {
   .Navigation {
     display: none;

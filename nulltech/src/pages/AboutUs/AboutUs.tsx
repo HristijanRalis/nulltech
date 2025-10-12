@@ -1,23 +1,20 @@
 import { faCircle } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Check } from "../../components/Check";
 
 export const AboutUs = () => {
   return (
     <div className="AboutUs">
       <div className="container">
-        <div className="CHECK d-flex justify-content-between align-items-center text-white  ">
-          <p className="description">NULL TECH</p>
-          <p className="description">2025</p>
-        </div>
+        <Check />
         <div className="aboutUsContent d-flex justify-content-center flex-column align-items-center my-5 ">
           <div className="row ">
             <h2 className="TITLE">who we are ?</h2>
           </div>
           <div className="row p-5 rowBlur">
             <ul className="whoWeAreList">
-              <li
-                className="weList d-flex gap-4 align-items-start">
+              <li className="weList d-flex gap-4 align-items-start">
                 <FontAwesomeIcon icon={faCircle} className="circle" />
                 <p className="aboutDescription">
                   Null Tech is a North Macedonia - based company with a strong
@@ -46,10 +43,7 @@ export const AboutUs = () => {
             </ul>
           </div>
         </div>
-        <div className="CHECK d-flex justify-content-between align-items-center text-white">
-          <p className="description">NULL TECH</p>
-          <p className="description">2025</p>
-        </div>
+        <Check />
       </div>
     </div>
   );
