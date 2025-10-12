@@ -1,3 +1,5 @@
+/*FONT HOOSKAI*/
+
 * {
   box-sizing: border-box;
 }
@@ -139,6 +141,16 @@
   align-items: center;
 }
 
+.TITLE {
+  color: #b4806a;
+  font-size: 58px;
+  text-transform: uppercase;
+  margin-block: 50px;
+}
+.description {
+  color: #0b3e3f;
+  font-size: 20px;
+}
 .bannerLogo {
   width: 900px;
 }
@@ -146,6 +158,63 @@
 .bannerDescription {
   text-transform: uppercase;
   color: #0b3e3f;
+}
+
+/* ====== ABOUT US ====== */
+
+.AboutUs {
+  width: 100%;
+  min-height: 100vh;
+  background: url("/images/mainBackground.png") no-repeat bottom center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 60px 0;
+}
+.rowBlur {
+  background: linear-gradient(
+    to top right,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 55px;
+  padding: 2rem;
+  margin-top: 50px;
+  box-shadow: 2px -2px 4px rgba(35, 146, 143, 0.6);
+}
+
+.whoWeAreList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.circle {
+  color: #23928f;
+  font-weight: 600;
+}
+.aboutDescription {
+  color: #23928f;
+  text-transform: uppercase;
+  padding-bottom: 0;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* ====== SERVICES ====== */
+.Services {
+  width: 100%;
+  height: 100vh;
+  background: url("/images/mainBackground.png") no-repeat bottom center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   .Navigation {
