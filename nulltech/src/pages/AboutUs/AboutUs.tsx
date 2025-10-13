@@ -1,6 +1,5 @@
 import { faCircle } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
 import { Check } from "../../components/Check";
 
 export const AboutUs = () => {

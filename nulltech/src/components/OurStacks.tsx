@@ -1,5 +1,5 @@
 import { Check } from "./Check";
-import { StackContainer } from "./stackContainer";
+import { StackContainer } from "./StackContainer";
 
 export const OurStacks = () => {
   return (

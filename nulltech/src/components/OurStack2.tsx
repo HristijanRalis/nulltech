@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Check } from "./Check";
 
 export const OurStack2 = () => {
