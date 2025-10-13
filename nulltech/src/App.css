@@ -6,6 +6,19 @@
 #root {
   max-width: 100%;
 }
+
+.stackHeader {
+  background-color: #b4806a;
+  box-shadow: rgba(35, 146, 143) 0px 4px 12px;
+  border-radius: 25px;
+  color: #0b3e3f;
+  padding: 20px;
+  margin-bottom: 2rem;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .Navbar {
   position: fixed;
   top: 0;
@@ -214,6 +227,13 @@
 /* ====== SERVICES ====== */
 .Services {
   width: 100%;
+  display: block;
+  overflow: visible;
+  background: none;
+  height: auto;
+}
+.OurServices {
+  width: 100%;
   height: 100vh;
   background: url("/images/mainBackground.png") no-repeat bottom center/cover;
   display: flex;
@@ -221,7 +241,62 @@
   align-items: center;
   overflow: hidden;
 }
+.OurStacks {
+  width: 100%;
+  min-height: 100vh;
+  background: url("/images/mainBackground.png") no-repeat bottom center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: visible;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
 
+.ourStackContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  padding: 3rem;
+
+  width: 100%;
+  text-align: center;
+}
+
+.ourStackList {
+  list-style-type: "-";
+  text-align: center;
+  color: #23928f;
+  line-height: 2;
+  font-size: 20px;
+  list-style-position: inside;
+  padding-left: 0;
+  width: 100%;
+}
+.col-12.col-md-4.d-flex {
+  flex-direction: column;
+}
+
+.ourLogo {
+  background-color: #0b3e3f;
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.ourLogo img {
+  width: 50%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+.horizontalLine {
+  width: 100%;
+  height: 5px;
+  background-color: #b4806a;
+  margin: 1rem 0;
+}
 /* ====== CONTACT ====== */
 
 .Contact {
@@ -265,5 +340,16 @@
 
   .hamburgerIcon {
     display: block;
+  }
+  .ourLogo img {
+    width: 180px;
+  }
+
+  .ourStackContent {
+    padding: 2rem 1rem;
+  }
+
+  .ourStackContent .TITLE {
+    font-size: 1.8rem;
   }
 }
