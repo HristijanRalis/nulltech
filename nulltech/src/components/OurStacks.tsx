@@ -31,13 +31,11 @@ export const OurStacks = () => {
             </div>
 
             {/* Middle column */}
-            <div className="col-12 col-md-4 d-flex justify-content-center">
-              <div className="ourLogoWrapper ">
-                <div className="horizontalLine"></div>
+            <div className="col-12 col-md-4 d-flex justify-content-center ">
+              <div className="ourLogoWrapper">
                 <div className="ourLogo">
                   <img src="/nullTech.png" alt="NullTech Logo" />
                 </div>
-                <div className="horizontalLine"></div>
               </div>
             </div>
 

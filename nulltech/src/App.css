@@ -11,6 +11,7 @@
   background-color: #b4806a;
   box-shadow: rgba(35, 146, 143) 0px 4px 12px;
   border-radius: 25px;
+  text-align: center;
   color: #0b3e3f;
   padding: 20px;
   margin-bottom: 2rem;
@@ -244,7 +245,8 @@
 .OurStacks {
   width: 100%;
   min-height: 100vh;
-  background: url("/images/mainBackground.png") no-repeat bottom center/cover;
+  background-color: rgb(2, 38, 43);
+
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -277,25 +279,61 @@
 .col-12.col-md-4.d-flex {
   flex-direction: column;
 }
+.ourLogoWrapper {
+  height: 100%;
+  display: flex;
+  align-items: center; /* centers vertically */
+  justify-content: center; /* centers horizontally */
+}
 
 .ourLogo {
   background-color: #0b3e3f;
   border-radius: 20px;
-  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ourLogo img {
-  width: 50%;
+  width: 100%;
   max-width: 400px;
-  height: auto;
+  height: auto; /* keep aspect ratio */
   object-fit: contain;
   display: block;
 }
-.horizontalLine {
+
+/* ====== OurStack2 ======   */
+.OurStack2 {
   width: 100%;
-  height: 5px;
-  background-color: #b4806a;
-  margin: 1rem 0;
+  min-height: 100vh;
+  background-color: rgb(2, 38, 43);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: visible;
+}
+.ourAiDataScienceList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style-type: circle;
+  padding-left: 0;
+  margin: 0;
+}
+
+.dataItem {
+  color: #23928f;
+  list-style: none;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.dataItem::before {
+  content: "•";
+  color: #23928f;
+  position: absolute;
+  left: 0;
 }
 /* ====== CONTACT ====== */
 
@@ -341,8 +379,12 @@
   .hamburgerIcon {
     display: block;
   }
+  .ourLogo {
+    width: 100%;
+    height: 200px;
+  }
   .ourLogo img {
-    width: 180px;
+    width: 100%;
   }
 
   .ourStackContent {

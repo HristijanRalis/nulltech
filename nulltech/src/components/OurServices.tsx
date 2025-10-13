@@ -1,14 +1,13 @@
-
 import { Check } from "./Check";
+import { StackContainer } from "./StackContainer";
 
 export const OurServices = () => {
   return (
     <div className="OurServices py-5">
       <div className="container">
         <Check />
-        <div className="ourServiceContent">
-        
-        </div>
+
+        <div className="ourServiceContent"></div>
         <Check />
       </div>
     </div>
