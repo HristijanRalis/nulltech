@@ -4,14 +4,14 @@ import { Check } from "../../components/Check";
 
 export const AboutUs = () => {
   return (
-    <div className="AboutUs">
+    <div className="AboutUs p-5">
       <div className="container">
         <Check />
         <div className="aboutUsContent d-flex justify-content-center flex-column align-items-center my-5 ">
           <div className="row ">
-            <h2 className="TITLE">who we are ?</h2>
+            <h2 className="TITLE text-center">who we are ?</h2>
           </div>
-          <div className="row p-5 rowBlur">
+          <div className="row  rowBlur ">
             <ul className="whoWeAreList">
               <li className="weList d-flex gap-4 align-items-start">
                 <FontAwesomeIcon icon={faCircle} className="circle" />

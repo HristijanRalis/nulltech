@@ -39,7 +39,7 @@ export const OurStack2 = () => {
             </div>
           </div>
 
-          <div className="row justify-content-center py-5">
+          <div className="row justify-content-center py-2">
             <div className="col-12 col-md-6 d-flex justify-content-center">
               <StackContainer name="AI / Data Science Tools" />
             </div>

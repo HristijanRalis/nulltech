@@ -1,4 +1,4 @@
-/*FONT HOOSKAI*/
+/*FONT HOOSKAI */
 
 * {
   box-sizing: border-box;
@@ -19,6 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: stackPulse 3s infinite ease-in-out;
 }
 .Navbar {
   position: fixed;
@@ -50,12 +51,13 @@
   margin-left: end;
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
 }
 
 .navigationList {
   list-style-type: none;
   display: flex;
+  justify-content: center;
   gap: 40px;
   padding-left: 0;
   margin: 0;
@@ -149,10 +151,12 @@
   overflow: hidden;
 }
 .Banner {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: top;
+  justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .TITLE {
@@ -171,7 +175,7 @@
   font-size: 20px;
 }
 .bannerLogo {
-  width: 900px;
+  width: 100%;
 }
 
 .bannerDescription {
@@ -182,6 +186,7 @@
 /* ====== ABOUT US ====== */
 
 .AboutUs {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   background: url("/images/mainBackground.png") no-repeat bottom center/cover;
@@ -192,17 +197,19 @@
   padding: 60px 0;
 }
 .rowBlur {
+  position: relative;
   background: linear-gradient(
     to top right,
     rgba(255, 255, 255, 0.15),
     rgba(255, 255, 255, 0)
   );
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 55px;
   padding: 2rem;
   margin-top: 50px;
-  box-shadow: 2px -2px 4px rgba(35, 146, 143, 0.6);
+  box-shadow: 0 0 10px rgba(35, 146, 143, 0.6);
+  animation: glowCycle 3s linear infinite;
 }
 
 .whoWeAreList {
@@ -282,22 +289,24 @@
 .ourLogoWrapper {
   height: 100%;
   display: flex;
-  align-items: center; /* centers vertically */
-  justify-content: center; /* centers horizontally */
+  align-items: center;
+  justify-content: center;
 }
 
 .ourLogo {
+  width: 200px;
+  height: 200px;
   background-color: #0b3e3f;
-  border-radius: 20px;
+  border-radius: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .ourLogo img {
-  width: 100%;
-  max-width: 400px;
-  height: auto; /* keep aspect ratio */
+  width: auto;
+  height: 350px;
+  max-height: 100%;
   object-fit: contain;
   display: block;
 }
@@ -365,12 +374,64 @@
 .contactItem {
   color: #23928f;
   font-size: 13px;
+  padding-left: 0;
 }
 
 .contactItemDescription {
   margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
 }
 
+.contactLink {
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  gap: 5px;
+  color: #23928f;
+}
+
+/* ====== KEYFRAMES ====== */
+
+@keyframes stackPulse {
+  0% {
+    transform: scale(0.5);
+    box-shadow: 0 0 10px rgba(35, 146, 143, 0.3);
+  }
+  50% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(35, 146, 143, 0.7);
+  }
+  100% {
+    transform: scale(0.5);
+    box-shadow: 0 0 10px rgba(35, 146, 143, 0.3);
+  }
+}
+
+@keyframes glowCycle {
+  0% {
+    box-shadow: 0 0 20px 5px rgba(35, 146, 143, 0.6);
+  }
+  25% {
+    box-shadow: 0 0 25px 10px rgba(180, 128, 106, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 30px 12px rgba(255, 255, 255, 0.5);
+  }
+  75% {
+    box-shadow: 0 0 25px 10px rgba(35, 146, 143, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 20px 5px rgba(35, 146, 143, 0.6);
+  }
+}
 @media (max-width: 768px) {
   .Navigation {
     display: none;
@@ -387,11 +448,43 @@
     width: 100%;
   }
 
+  .rowBlur {
+    margin: 20px;
+  }
+
+  .aboutDescription {
+    font-size: 15px;
+  }
+
   .ourStackContent {
     padding: 2rem 1rem;
   }
 
   .ourStackContent .TITLE {
     font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .bannerDescription {
+    font-size: 15px;
+    padding-top: 3rem;
+  }
+
+  .hamburgerIcon {
+    display: block;
+    margin-inline: 20px;
+  }
+
+  .rowBlur {
+    margin: 3rem;
+  }
+
+  .aboutDescription {
+    font-size: 15px;
+  }
+
+  .contactList {
+    padding: 0;
   }
 }
