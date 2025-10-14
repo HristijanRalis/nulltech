@@ -271,8 +271,8 @@
   width: 100%;
   display: block;
   background: none;
-  height: 100vh;
-  overflow: hidden;
+  height: auto;
+  overflow: visible;
 }
 .OurServices {
   width: 100%;
