@@ -94,17 +94,23 @@ export const Contact = () => {
           <div className="col-12  col-md-6 col-lg-3">
             <h3 className="contactTitle">phone</h3>
             <ul className="contactList">
-              <li className="contactItem d-flex  align-items-center gap-3">
+              <li className="contactItem d-flex align-items-center gap-3">
                 <FontAwesomeIcon icon={faPhone} />
-                <p className="contactItemDescription">+38978258848</p>
-              </li>
-              <li className="contactItem d-flex  align-items-center gap-3">
-                <FontAwesomeIcon icon={faPhone} />
-                <p className="contactItemDescription">+38970221997</p>
+                <a href="tel:+38978258848" className="contactItemDescription">
+                  +38978258848
+                </a>
               </li>
               <li className="contactItem d-flex align-items-center gap-3">
                 <FontAwesomeIcon icon={faPhone} />
-                <p className="contactItemDescription">+38978313742</p>
+                <a href="tel:+38970221997" className="contactItemDescription">
+                  +38970221997
+                </a>
+              </li>
+              <li className="contactItem d-flex align-items-center gap-3">
+                <FontAwesomeIcon icon={faPhone} />
+                <a href="tel:+38978313742" className="contactItemDescription">
+                  +38978313742
+                </a>
               </li>
             </ul>
           </div>

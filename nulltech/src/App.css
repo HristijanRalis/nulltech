@@ -293,6 +293,7 @@
   max-width: 1200px;
   height: 600px;
   margin: 0 auto;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -604,6 +605,44 @@
     box-shadow: 0 0 20px 5px rgba(35, 146, 143, 0.6);
   }
 }
+
+@media (max-width: 1220px) {
+  .ourServiceContent {
+    max-width: 100%; /* smaller container for smaller screens */
+  }
+
+  /* Reduce orbit distances proportionally */
+  .cloud {
+    transform: translate(-130px, -280px);
+  }
+  .uiux {
+    transform: translate(80px, -200px);
+  }
+  .integration {
+    transform: translate(-350px, -180px);
+  }
+  .mobile {
+    transform: translate(-450px, -100px);
+  }
+  .digital {
+    transform: translate(-500px, 0);
+  }
+  .data {
+    transform: translate(-480px, 120px);
+  }
+  .devops {
+    transform: translate(-130px, 150px);
+  }
+  .ai {
+    transform: translate(200px, 120px);
+  }
+  .cyber {
+    transform: translate(210px, -100px);
+  }
+  .managed {
+    transform: translate(230px, 0);
+  }
+}
 @media (max-width: 768px) {
   .Navigation {
     display: none;
@@ -648,6 +687,20 @@
     display: block;
     max-height: 80vh;
     overflow-y: auto;
+  }
+
+  .mobileOurServiceContent::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .mobileOurServiceContent::-webkit-scrollbar-thumb {
+    background-color: #0b3e3f;
+    border-radius: 5px;
+  }
+
+  .mobileOurServiceContent::-webkit-scrollbar-track {
+    background-color: #23928f;
+    border-radius: 5px;
   }
 }
 
