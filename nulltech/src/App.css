@@ -20,7 +20,11 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  animation: stackPulse 3s infinite ease;
+  transition: 0.5s ease;
+}
+
+.stackHeader:hover {
+  transform: scale(1.1);
 }
 
 .Navbar {
@@ -574,21 +578,6 @@
 }
 
 /* ====== KEYFRAMES ====== */
-
-@keyframes stackPulse {
-  0% {
-    transform: scale(0.9);
-    box-shadow: 0 0 10px rgba(35, 146, 143, 0.3);
-  }
-  50% {
-    transform: scale(1);
-    box-shadow: 0 0 15px rgba(35, 146, 143, 0.7);
-  }
-  100% {
-    transform: scale(0.9);
-    box-shadow: 0 0 10px rgba(35, 146, 143, 0.3);
-  }
-}
 
 @keyframes glowCycle {
   0% {
