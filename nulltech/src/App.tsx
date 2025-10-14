@@ -6,6 +6,7 @@ import { Services } from "./pages/Services/Services";
 import { Contact } from "./pages/Contact/Contact";
 import { Navbar } from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
         <Contact />
       </section>
 
+
+      <ScrollToTop />
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutUs" element={<AboutUs />} />

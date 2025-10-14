@@ -141,6 +141,38 @@
   z-index: 1100;
 }
 
+/*  ====== scrollToTop ====== */
+
+.scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #23928f;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s ease;
+  z-index: 100;
+  border-radius: 50%;
+}
+
+.scrollToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scrollToTop:hover {
+  transform: scale(1.1);
+}
+.scrollIcon {
+  color: white;
+}
+
 /* ====== Banner ====== */
 
 .Home {
