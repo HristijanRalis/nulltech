@@ -79,7 +79,7 @@ export const Contact = () => {
               </li>
               <li className="contactItem d-flex  align-items-center ">
                 <a
-                  href="mailto: aleksandar.d@nulltech.ai "
+                  href="mailto: aleksandar.p@nulltech.ai "
                   className="contactLink"
                 >
                   <FontAwesomeIcon icon={faEnvelope} />
