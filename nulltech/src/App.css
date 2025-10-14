@@ -10,7 +10,7 @@
 .stackHeader {
   background-color: #b4806a;
   box-shadow: rgba(35, 146, 143) 0px 4px 12px;
-  border-radius: 25px;
+  border-radius: 40px;
   text-align: center;
   color: #0b3e3f;
   padding: 20px;
@@ -19,8 +19,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: stackPulse 3s infinite ease-in-out;
+  cursor: pointer;
+  animation: stackPulse 3s infinite ease;
 }
+
 .Navbar {
   position: fixed;
   top: 0;
@@ -236,19 +238,123 @@
 .Services {
   width: 100%;
   display: block;
-  overflow: visible;
   background: none;
   height: auto;
 }
 .OurServices {
   width: 100%;
   height: 100vh;
-  background: url("/images/mainBackground.png") no-repeat bottom center/cover;
+  background: url("/images/mainBackground.png") no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
+  font-family: "Orbitron", sans-serif;
+  color: #7fd1d1;
 }
+
+.ourServiceContent {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* wider container instead of scaleX */
+  height: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Central Circle */
+.centerCircle {
+  width: 40%;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 280px;
+  z-index: 1;
+}
+
+/* StackContainer centered above circle */
+
+/* Orbit layout */
+.serviceTitle {
+  color: #23928f;
+}
+.service {
+  position: absolute;
+  font-size: 20px;
+  max-width: 310px;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+
+  z-index: 3;
+}
+
+/* Hover just color change */
+.service:hover {
+  color: #c5886a;
+}
+
+.desc {
+  max-width: 300px;
+  font-size: 15px;
+  color: #9ddcdc;
+  display: block;
+  font-weight: 300;
+  margin-top: 14px;
+}
+
+/* Circular positions with controlled X and Y distances */
+
+/*CENTER TOP*/
+.cloud {
+  transform: translate(-150px, -315px);
+}
+
+/* Left side */
+
+.integration {
+  transform: translate(-400px, -240px);
+}
+
+.mobile {
+  transform: translate(-590px, -130px);
+}
+
+.digital {
+  transform: translate(-620px, 0);
+}
+
+.data {
+  transform: translate(-560px, 140px);
+}
+
+/* Right side */
+
+.uiux {
+  transform: translate(100px, -240px);
+}
+
+.cyber {
+  transform: translate(260px, -130px);
+}
+.managed {
+  transform: translate(320px, 0);
+}
+
+.ai {
+  transform: translate(240px, 160px);
+}
+
+/* CENTER BOTTOM */
+.devops {
+  transform: translate(-150px, 200px);
+}
+
 .OurStacks {
   width: 100%;
   min-height: 100vh;
@@ -402,7 +508,7 @@
 
 @keyframes stackPulse {
   0% {
-    transform: scale(0.5);
+    transform: scale(0.9);
     box-shadow: 0 0 10px rgba(35, 146, 143, 0.3);
   }
   50% {
@@ -410,7 +516,7 @@
     box-shadow: 0 0 15px rgba(35, 146, 143, 0.7);
   }
   100% {
-    transform: scale(0.5);
+    transform: scale(0.9);
     box-shadow: 0 0 10px rgba(35, 146, 143, 0.3);
   }
 }
