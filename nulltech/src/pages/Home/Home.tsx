@@ -3,7 +3,7 @@ export const Home = () => {
     <div className="Home">
       <div className="Banner">
         <img
-          src="/images/LOGO/nullTech.png"
+         src="/images/LOGO/nullTech.png"
           className="bannerLogo"
           alt="logo"
         />

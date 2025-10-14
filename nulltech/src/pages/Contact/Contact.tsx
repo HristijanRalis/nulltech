@@ -37,7 +37,7 @@ export const Contact = () => {
                   </p>
                 </a>
               </li>
-              <li className="contactItem d-flex gap-3">
+              <li className="contactItem d-flex ">
                 <a
                   href="https://www.google.com/maps/place/Ljubljana,+Slovenia"
                   target="_blank"
@@ -48,12 +48,12 @@ export const Contact = () => {
                   <p className="contactItemDescription">Ljubljana, Slovenia</p>
                 </a>
               </li>
-              <li className="contactItem d-flex gap-3">
+              <li className="contactItem d-flex ">
                 <a
                   href="https://www.google.com/maps/place/Belgrade,+Serbia"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="contactLink d-flex align-items-center gap-3"
+                  className="contactLink d-flex align-items-center "
                 >
                   <FontAwesomeIcon icon={faLocationDot} />
                   <p className="contactItemDescription">Belgrade, Serbia</p>
@@ -65,26 +65,26 @@ export const Contact = () => {
           <div className="col-12  col-md-6 col-lg-3">
             <h3 className="contactTitle">e-mail</h3>
             <ul className="contactList ">
-              <li className="contactItem d-flex align-items-center gap-3">
+              <li className="contactItem d-flex align-items-center ">
                 <a href="mailto:info@nulltech.ai " className="contactLink">
                   <FontAwesomeIcon icon={faEnvelope} />
                   <p className="contactItemDescription">info@nulltech.ai</p>
                 </a>
               </li>
-              <li className="contactItem d-flex  align-items-center gap-3">
+              <li className="contactItem d-flex  align-items-center ">
                 <a href="mailto:vasko.d@nulltech.ai" className="contactLink">
                   <FontAwesomeIcon icon={faEnvelope} />
                   <p className="contactItemDescription">vasko.d@nulltech.ai</p>
                 </a>
               </li>
-              <li className="contactItem d-flex  align-items-center gap-3">
+              <li className="contactItem d-flex  align-items-center ">
                 <a
                   href="mailto: aleksandar.d@nulltech.ai "
                   className="contactLink"
                 >
                   <FontAwesomeIcon icon={faEnvelope} />
                   <p className="contactItemDescription">
-                    aleksandar.d@nulltech.ai
+                    aleksandar.p@nulltech.ai
                   </p>
                 </a>
               </li>
@@ -94,19 +94,19 @@ export const Contact = () => {
           <div className="col-12  col-md-6 col-lg-3">
             <h3 className="contactTitle">phone</h3>
             <ul className="contactList">
-              <li className="contactItem d-flex align-items-center gap-3">
+              <li className="contactItem d-flex align-items-center ">
                 <FontAwesomeIcon icon={faPhone} />
                 <a href="tel:+38978258848" className="contactItemDescription">
                   +38978258848
                 </a>
               </li>
-              <li className="contactItem d-flex align-items-center gap-3">
+              <li className="contactItem d-flex align-items-center ">
                 <FontAwesomeIcon icon={faPhone} />
                 <a href="tel:+38970221997" className="contactItemDescription">
                   +38970221997
                 </a>
               </li>
-              <li className="contactItem d-flex align-items-center gap-3">
+              <li className="contactItem d-flex align-items-center">
                 <FontAwesomeIcon icon={faPhone} />
                 <a href="tel:+38978313742" className="contactItemDescription">
                   +38978313742
@@ -118,13 +118,13 @@ export const Contact = () => {
           <div className="col-12  col-md-6 col-lg-3">
             <h3 className="contactTitle">website</h3>
             <ul className="contactList ">
-              <li className="contactItem d-flex align-items-center gap-3">
+              <li className="contactItem d-flex align-items-center ">
                 <a href="#" className="contactLink">
                   <FontAwesomeIcon icon={faGlobe} />
                   <p className="contactItemDescription">nulltech.ai</p>
                 </a>
               </li>
-              <li className="contactItem d-flex gap-3">
+              <li className="contactItem d-flex ">
                 <a href="#" className="contactLink">
                   <FontAwesomeIcon icon={faGlobe} />
                   <p className="contactItemDescription">nulltech.mk</p>

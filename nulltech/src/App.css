@@ -533,7 +533,7 @@
 .contactTitle {
   color: #b4806a;
   font-size: 25px;
-  text-align: center;
+  text-align: start;
 }
 
 .contactList {

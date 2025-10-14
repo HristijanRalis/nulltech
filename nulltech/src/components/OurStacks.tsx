@@ -34,7 +34,7 @@ export const OurStacks = () => {
             <div className="col-12 col-md-4 d-flex justify-content-center ">
               <div className="ourLogoWrapper">
                 <div className="ourLogo">
-                  <img src="/nullTech.png" alt="NullTech Logo" />
+                  <img src="/images/LOGO/nullTech.png" alt="NullTech Logo" />
                 </div>
               </div>
             </div>
