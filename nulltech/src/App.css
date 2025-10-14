@@ -6,7 +6,6 @@
 #root {
   max-width: 100%;
 }
-
 .stackHeader {
   background-color: #b4806a;
   box-shadow: rgba(35, 146, 143) 0px 4px 12px;
@@ -634,6 +633,34 @@
     transform: translate(230px, 0);
   }
 }
+@media (max-width: 1220px) and (min-width: 901px) {
+  .stackHeader {
+    height: 100px;
+    padding: 25px 30px;
+    font-size: 1.3rem;
+    border-radius: 35px;
+    margin-bottom: 2.5rem;
+  }
+
+  .ourStackList {
+    padding-left: 10px;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+}
+/* Tablets (768px - 900px) */
+@media (max-width: 900px) and (min-width: 768px) {
+  .stackHeader {
+    height: auto;
+    padding: 25px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+  }
+
+  .ourStackList {
+    font-size: 16px;
+  }
+}
 @media (max-width: 768px) {
   .Navigation {
     display: none;
@@ -665,6 +692,7 @@
   .ourStackContent .TITLE {
     font-size: 1.8rem;
   }
+
   .OurServices {
     height: auto;
     display: block;
