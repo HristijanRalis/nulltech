@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect, useRef } from "react";
+import { NavButton } from "./NavButton";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,38 +56,21 @@ export const Navbar = () => {
       {/* NAVIGATION LINKS */}
       <nav className="Navigation">
         <ul className="navigationList">
-          <li>
-            <button
-              className="listItem"
-              onClick={() => scrollToSection("home")}
-            >
-              Home
-            </button>
-          </li>
-          <li>
-            <button
-              className="listItem"
-              onClick={() => scrollToSection("aboutUs")}
-            >
-              About Us
-            </button>
-          </li>
-          <li>
-            <button
-              className="listItem"
-              onClick={() => scrollToSection("services")}
-            >
-              Services
-            </button>
-          </li>
-          <li>
-            <button
-              className="listItem"
-              onClick={() => scrollToSection("contact")}
-            >
-              Contact
-            </button>
-          </li>
+          {[
+            { label: "Home", id: "home" },
+            { label: "About Us", id: "aboutUs" },
+            { label: "Services", id: "services" },
+            { label: "Contacts", id: "contact" },
+          ].map((link) => (
+            <li key={link.id}>
+              <NavButton
+                label={link.label}
+                sectionId={link.id}
+                onClick={scrollToSection}
+                className="listItem"
+              />
+            </li>
+          ))}
         </ul>
       </nav>
 
@@ -102,38 +86,21 @@ export const Navbar = () => {
       {/* MOBILE MENU */}
       <div className={`hamburgerMenu ${isMenuOpen ? "showMenu" : ""}`}>
         <ul className="hamburgerNavigationList">
-          <li>
-            <button
-              className="hamburgerListItem"
-              onClick={() => scrollToSection("home")}
-            >
-              Home
-            </button>
-          </li>
-          <li>
-            <button
-              className="hamburgerListItem"
-              onClick={() => scrollToSection("aboutUs")}
-            >
-              About Us
-            </button>
-          </li>
-          <li>
-            <button
-              className="hamburgerListItem"
-              onClick={() => scrollToSection("services")}
-            >
-              Services
-            </button>
-          </li>
-          <li>
-            <button
-              className="hamburgerListItem"
-              onClick={() => scrollToSection("contact")}
-            >
-              Contact
-            </button>
-          </li>
+          {[
+            { label: "Home", id: "home" },
+            { label: "About Us", id: "aboutUs" },
+            { label: "Services", id: "services" },
+            { label: "Contacts", id: "contact" },
+          ].map((link) => (
+            <li key={link.id}>
+              <NavButton
+                label={link.label}
+                sectionId={link.id}
+                onClick={scrollToSection}
+                className="hamburgerListItem"
+              />
+            </li>
+          ))}
         </ul>
       </div>
     </div>
